@@ -19,6 +19,10 @@ auth_header = zeep.xsd.Element(
 )
 auth_header_value = auth_header(TokenValue=token)
 
+@app.route('/health')
+def health():
+  return 'OK'
+
 @app.route('/departures/<crs>')
 def departures(crs):
   with client.settings(raw_response=True):
