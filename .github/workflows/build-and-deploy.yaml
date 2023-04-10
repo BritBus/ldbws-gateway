@@ -13,7 +13,7 @@ env:
 
 jobs:
   gateway-docker:
-    name: Package data-importer Docker image
+    name: Package ldbws-gateway Docker image
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -54,7 +54,7 @@ jobs:
   gateway-deploy-helm:
     if: github.ref == 'refs/heads/main'
   
-    name: Deploy data-importer to BritBus Kubernetes
+    name: Deploy ldbws-gateway to BritBus Kubernetes
     runs-on: ubuntu-latest
     environment: production
 
